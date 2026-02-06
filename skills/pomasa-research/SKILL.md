@@ -115,15 +115,57 @@ brainstorming 的目标是确定 `user_input_template.md` 的各项内容：
 
 根据实际选题和输出形式对风格做适当调整。其他输出形式（研究报告、技术分析等）应在 brainstorming 阶段确定相应的写作风格。
 
-### Step 4-6: 按 POMASA Generator 流程执行
+### Step 4-6: 执行 POMASA Generator 完整流程
 
-阅读 `~/.pomasa/pomasa/skills/pomasa/SKILL.md`，按其流程：
-1. 阅读 `~/.pomasa/pomasa/skills/pomasa/pattern-catalog/README.md` 了解可用模式
-2. 根据 user_input 选择模式组合
-3. 阅读所有 Required 模式（Step 2.5 强制要求）
-4. 生成 `~/.pomasa/pomasa/{project-id}/` 下的完整智能体系统
-5. 运行智能体系统，产出研究数据
-6. 基于研究数据生成最终产出（文章、报告或其他在 brainstorming 阶段确定的输出形式）
+**必须使用 Task tool 调度一个专门的 agent 来执行完整的 POMASA 流程。**
+
+使用以下参数调用 Task tool：
+
+```
+subagent_type: "general-purpose"
+description: "Execute POMASA generator workflow"
+prompt: "
+请严格按照以下步骤执行，不要在任何步骤提前停止：
+
+**工作目录**: ~/.pomasa/pomasa/
+
+**Step 1: 读取用户输入**
+阅读 ~/.pomasa/pomasa/{project-id}/user_input_template.md
+
+**Step 2: 读取 POMASA Generator Skill**
+阅读 ~/.pomasa/pomasa/skills/pomasa/SKILL.md，理解完整的生成流程
+
+**Step 3: 读取模式目录**
+阅读 ~/.pomasa/pomasa/skills/pomasa/pattern-catalog/README.md，了解可用模式
+
+**Step 4: 选择并阅读 Required 模式**
+必须阅读所有 Required 模式文档，特别是 BHV-02
+
+**Step 5: 生成智能体系统**
+在 ~/.pomasa/pomasa/{project-id}/ 下生成完整的系统文件：
+- agents/ 目录及所有 Agent Blueprints
+- references/methodology/ 目录及方法论文件
+- 其他必需的目录和文件
+
+**Step 6: 运行智能体系统**
+按照 agents/00.orchestrator.md 的流程，使用 Task tool 依次调度各个子智能体，生成研究数据到 workspace/ 目录
+
+**Step 7: 生成最终产出**
+基于 workspace/ 中的研究数据，按照 output_template 生成最终的文章/报告
+
+**验收标准**：
+- 必须完成所有 7 个步骤
+- 最终产出文件必须存在于 workspace/ 或 _output/ 目录
+- 向我汇报最终产出的完整路径
+
+不要在 Step 5 完成后就停止，必须继续执行 Step 6 和 7。
+"
+```
+
+**关键点**：
+- 使用 Task tool 确保流程不会中断
+- 在 prompt 中明确列出所有步骤和验收标准
+- 强调不要提前停止
 
 ## Phase 2: 结果展示
 

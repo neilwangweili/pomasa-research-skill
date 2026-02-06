@@ -1,0 +1,13 @@
+{
+  "name": "pomasa-research-skill",
+  "version": "1.0.0",
+  "description": "Research any topic and produce structured outputs (articles, reports, analyses) using the POMASA multi-agent generator framework. Supports user-scope execution from any directory.",
+  "author": {
+    "name": "neilwangweili",
+    "url": "https://github.com/neilwangweili"
+  },
+  "homepage": "https://github.com/neilwangweili/pomasa-research-skill",
+  "repository": "https://github.com/neilwangweili/pomasa-research-skill",
+  "license": "Apache-2.0",
+  "keywords": ["pomasa", "research", "multi-agent", "writing", "analysis"]
+}

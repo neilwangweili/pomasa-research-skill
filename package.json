@@ -1,0 +1,12 @@
+{
+  "name": "pomasa-research-skill",
+  "version": "1.0.0",
+  "description": "Research and write articles using the POMASA multi-agent generator framework",
+  "author": "neilwangweili",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilwangweili/pomasa-research-skill.git"
+  },
+  "keywords": ["pomasa", "research", "multi-agent", "claude-code", "skill"]
+}

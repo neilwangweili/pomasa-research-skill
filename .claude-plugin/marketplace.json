@@ -1,0 +1,19 @@
+{
+  "name": "pomasa-research-skill",
+  "owner": {
+    "name": "neilwangweili",
+    "url": "https://github.com/neilwangweili"
+  },
+  "metadata": {
+    "description": "POMASA research skill for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "pomasa-research-skill",
+      "source": ".",
+      "description": "Research any topic and produce structured outputs using the POMASA multi-agent generator framework.",
+      "version": "1.0.0"
+    }
+  ]
+}

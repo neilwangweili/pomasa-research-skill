@@ -15,7 +15,8 @@ It should be noted that the core development of [POMASA](https://github.com/eXtr
 ## Installation
 
 ```bash
-claude plugin add neilwangweili/pomasa-research-skill
+claude plugin marketplace add neilwangweili/pomasa-research-skill
+claude plugin install pomasa-research-skill
 ```
 
 ## Usage

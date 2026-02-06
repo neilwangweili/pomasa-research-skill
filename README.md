@@ -2,6 +2,8 @@
 
 A Claude Code skill plugin for researching any topic and producing structured outputs (articles, reports, analyses, etc.) using the [POMASA](https://github.com/neilwangweili/pomasa) multi-agent generator framework.
 
+It should be noted that the core development of [POMASA](https://github.com/eXtremeProgramming-cn/pomasa) which in [Extreme Programming China](https://github.com/eXtremeProgramming-cn) was completed by [@Jeff Xiong](https://github.com/gigix), whose exceptional technical expertise was instrumental in the realization of this project. I was merely responsible for the subsequent, minor encapsulation work required to transform it into the skill format.
+
 ## Features
 
 - Works from **any directory** — automatically manages POMASA workspace in `~/.pomasa/pomasa/`

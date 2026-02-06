@@ -11,7 +11,10 @@
   "plugins": [
     {
       "name": "pomasa-research-skill",
-      "source": ".claude-plugin",
+      "source": {
+        "source": "github",
+        "repo": "neilwangweili/pomasa-research-skill"
+      },
       "description": "Research any topic and produce structured outputs using the POMASA multi-agent generator framework.",
       "version": "1.0.0"
     }
